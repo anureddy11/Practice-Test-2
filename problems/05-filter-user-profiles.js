@@ -21,8 +21,25 @@ filterUserProfiles(facebookUsers, (user) => user.state === "New York"); // ["Mik
 ***********************************************************************/
 
 function filterUserProfiles(users, filter) {
-  // Your code here 
+  // Your code here
+
+  let result = users.filter((user)=> filter(user))
+  return result.map((element)=>element["name"])
+  console.log(result.map((element)=>element["name"]))
+
+
+
 }
+
+const facebookUsers = [
+  { name: "John", age: "21", state: "Florida" },
+  { name: "Mary", age: "57", state: "California" },
+  { name: "Judy", age: "47", state: "Texas" },
+  { name: "Mike", age: "32", state: "New York" }
+];
+
+filterUserProfiles(facebookUsers, (user) => user.age > 30); // ["Mary", "Judy", "Mike"]
+filterUserProfiles(facebookUsers, (user) => user.state === "New York"); // ["Mike"]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

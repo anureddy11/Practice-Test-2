@@ -11,7 +11,16 @@ sentenceMaker('I', 'love', 'coding'); // 'I love coding!'
 sentenceMaker('The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'); // 'The quick brown fox jumps over the lazy dog!'
 ***********************************************************************/
 
-// Your code here 
+// Your code here
+let sentenceMaker = (...string) =>{
+	string[string.length-1] = string[string.length-1] + "!"
+	console.log(string.join(" "))
+	return string.join (" ")
+}
+
+sentenceMaker('Hello', 'World'); // 'Hello World!'
+sentenceMaker('I', 'love', 'coding'); // 'I love coding!'
+sentenceMaker('The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'); // 'The quick brown fox jumps over the lazy dog!'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
